@@ -57,13 +57,11 @@ public class AccountHelper {
         protected String doInBackground(String... params) {
 
             //     InputStream inputStream
-            String fname = params[0];
-            String lname = params[1];
-            String mob = params[2];
-            String email = params[3];
-            String pass = params[4];
-            String gender = params[5];
-
+            String name = params[0];
+            String mob = params[1];
+            String email = params[2];
+            String address = params[3];
+            String passw = params[4];
 
             String json = "";
             try {
@@ -73,13 +71,11 @@ public class AccountHelper {
                 builder.addHeader("Content-Type", "application/x-www-form-urlencoded");
                 builder.addHeader("Accept", "application/json");
                 FormBody.Builder parameters = new FormBody.Builder();
-                parameters.add("FirstName", fname);
-                parameters.add("LastName", lname);
-                parameters.add("MobileNumber", mob);
-                parameters.add("EmailAddrss", email);
-                parameters.add("Gender", gender);
-                parameters.add("Password", pass);
-
+                parameters.add("Name", name);
+                parameters.add("Mobile", mob);
+                parameters.add("Email", email);
+                parameters.add("Address", address);
+                parameters.add("Password", passw);
                 builder.post(parameters.build());
 
                 okhttp3.Response response = client.newCall(builder.build()).execute();
