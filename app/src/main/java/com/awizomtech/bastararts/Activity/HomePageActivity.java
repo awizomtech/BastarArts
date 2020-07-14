@@ -53,7 +53,7 @@ public class HomePageActivity extends AppCompatActivity {
             }
         });
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_profile, R.id.nav_my_courses, R.id.nav_payment, R.id.nav_course, R.id.nav_logout, R.id.nav_share, R.id.nav_quiz)
+                R.id.nav_profile, R.id.nav_my_category, R.id.nav_payment, R.id.nav_order, R.id.nav_logout, R.id.nav_share, R.id.nav_request,R.id.nav_about,R.id.nav_contact)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -66,16 +66,21 @@ public class HomePageActivity extends AppCompatActivity {
 
                 if (id == R.id.nav_profile) {
 
-                } else if (id == R.id.nav_my_courses) {
+                } else if (id == R.id.nav_my_category) {
                     Intent intent = new Intent(HomePageActivity.this, ProductCategoryActivity.class);
                   startActivity(intent);
                 } else if (id == R.id.nav_payment) {
 
-                } else if (id == R.id.nav_course) {
+                } else if (id == R.id.nav_order) {
 
-                } else if (id == R.id.nav_quiz) {
+                } else if (id == R.id.nav_request) {
 
-                } else if (id == R.id.nav_share) {
+                }else if (id == R.id.nav_about) {
+
+                }else if (id == R.id.nav_contact) {
+
+                }
+                else if (id == R.id.nav_share) {
 
                 } else if (id == R.id.nav_logout) {
                     SharedPrefManager sp = new SharedPrefManager(HomePageActivity.this);
@@ -99,16 +104,18 @@ public class HomePageActivity extends AppCompatActivity {
                         fragment = new HomeFragment();
                         loadFragment(fragment);
                         return true;
-                    case R.id.navigation_my_library:
+                    case R.id.navigation_my_request:
 
-                    case R.id.navigation_plus:
+                    case R.id.navigation_my_order:
+
+                    case R.id.navigation_payment:
 
                     case R.id.navigation_profile:
 
-                    case R.id.navigationMenu:
+                    /*case R.id.navigationMenu:
                         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
                         drawer.openDrawer(GravityCompat.START);
-                        return true;
+                        return true;*/
                 }
 
                 return false;
@@ -118,6 +125,7 @@ public class HomePageActivity extends AppCompatActivity {
         bnv_menu.setSelectedItemId(R.id.navigation_home);
         loadFragment(new HomeFragment());
 
+      /*  GetCourselist();*/
     }
 
     private void loadFragment(Fragment fragment) {

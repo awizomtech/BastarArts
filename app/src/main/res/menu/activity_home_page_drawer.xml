@@ -9,34 +9,40 @@
             android:icon="@drawable/ic_baseline_account_circle_24"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_my_courses"
-            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:id="@+id/nav_my_category"
+            android:icon="@drawable/ic_baseline_chrome_reader_mode_24"
             android:title="@string/menu_course" />
-
         <item
-            android:id="@+id/nav_payment"
-            android:icon="@drawable/ic_baseline_account_circle_24"
-            android:title="@string/menu_gallery" />
-        <item
-            android:id="@+id/nav_course"
-            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:id="@+id/nav_request"
+            android:icon="@drawable/ic_baseline_star_border_24"
             android:title="@string/menu_slideshow" />
         <item
-            android:id="@+id/nav_quiz"
-            android:icon="@drawable/ic_baseline_account_circle_24"
-            android:title="Fitness Test" />
+            android:id="@+id/nav_order"
+            android:icon="@drawable/ic_baseline_shopping_cart_24"
+            android:title="My Order" />
+        <item
+            android:id="@+id/nav_payment"
+            android:icon="@drawable/ic_baseline_account_balance_wallet_24"
+            android:title="@string/menu_gallery" />
 
     </group>
     <item android:title="Action Tools">
         <menu>
-
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_baseline_assignment_ind_24"
+                android:title="About Us" />
+            <item
+                android:id="@+id/nav_contact"
+                android:icon="@drawable/ic_baseline_contact_mail_24"
+                android:title="Contact Us" />
             <item
                 android:id="@+id/nav_share"
-                android:icon="@drawable/ic_baseline_account_circle_24"
+                android:icon="@drawable/ic_baseline_share_24"
                 android:title="Share" />
             <item
                 android:id="@+id/nav_logout"
-                android:icon="@drawable/ic_baseline_account_circle_24"
+                android:icon="@drawable/ic_baseline_power_settings_new_24"
                 android:title="Logout" />
         </menu>
     </item>
