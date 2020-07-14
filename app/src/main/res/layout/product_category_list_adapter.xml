@@ -26,8 +26,8 @@
                 android:orientation="horizontal">
                 <ImageView
                     android:id="@+id/image"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:src="@drawable/logo"/>
                     <TextView
                         android:id="@+id/productname"
@@ -36,8 +36,9 @@
                         android:layout_marginTop="10dp"
                        android:text="category name"
                         android:layout_marginLeft="10dp"
-                        android:textColor="#387CBF"
-                        android:textSize="13dp" />
+                        android:textColor="#E34B7B"
+                        android:textStyle="bold"
+                        android:textSize="18dp" />
                 </LinearLayout>
         </androidx.cardview.widget.CardView>
 

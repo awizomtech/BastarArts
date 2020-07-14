@@ -3,6 +3,8 @@ package com.awizomtech.bastararts.Activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,6 +24,13 @@ TextView Pname,Pcode,Descrip;
     }
 
     private void Initview() {
+        Button backpress=findViewById(R.id.back);
+        backpress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         Pname=findViewById(R.id.productname);
         Pcode=findViewById(R.id.productcode);
         Descrip =findViewById(R.id.description);

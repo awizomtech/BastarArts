@@ -8,6 +8,8 @@ import androidx.viewpager.widget.ViewPager;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import com.awizomtech.bastararts.Adapter.ProductAdapter;
 import com.awizomtech.bastararts.Adapter.ViewPagerAdapter;
@@ -35,6 +37,13 @@ public class CategoryBaseProductActivity extends AppCompatActivity {
         InitView();
     }
     private void InitView() {
+        Button backpress=findViewById(R.id.back);
+        backpress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading...");
         progressDialog.setCancelable(false);
