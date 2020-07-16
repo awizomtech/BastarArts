@@ -14,6 +14,10 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import com.awizomtech.bastararts.Fragment.HomeFragment;
+import com.awizomtech.bastararts.Fragment.MyRequestFragment;
+import com.awizomtech.bastararts.Fragment.OrderFragment;
+import com.awizomtech.bastararts.Fragment.PaymentFragment;
+import com.awizomtech.bastararts.Fragment.ProfileFragment;
 import com.awizomtech.bastararts.R;
 import com.awizomtech.bastararts.SharedPreference.SharedPrefManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -74,7 +78,8 @@ public class HomePageActivity extends AppCompatActivity {
                 } else if (id == R.id.nav_order) {
 
                 } else if (id == R.id.nav_request) {
-
+                    Intent intent = new Intent(HomePageActivity.this, QuoteListActivity.class);
+                    startActivity(intent);
                 }else if (id == R.id.nav_about) {
 
                 }else if (id == R.id.nav_contact) {
@@ -94,7 +99,6 @@ public class HomePageActivity extends AppCompatActivity {
         });
         fl_container = findViewById(R.id.fl_container);
         bnv_menu = findViewById(R.id.bnv_menu);
-//test
         bnv_menu.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -105,14 +109,22 @@ public class HomePageActivity extends AppCompatActivity {
                         loadFragment(fragment);
                         return true;
                     case R.id.navigation_my_request:
-
+                        fragment = new MyRequestFragment();
+                        loadFragment(fragment);
+                        return true;
                     case R.id.navigation_my_order:
-
+                        fragment = new OrderFragment();
+                        loadFragment(fragment);
+                        return true;
                     case R.id.navigation_payment:
-
+                        fragment = new PaymentFragment();
+                        loadFragment(fragment);
+                        return true;
                     case R.id.navigation_profile:
-
-                    /*case R.id.navigationMenu:
+                        fragment = new ProfileFragment();
+                        loadFragment(fragment);
+                        return true;
+                  /*  case R.id.navigationMenu:
                         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
                         drawer.openDrawer(GravityCompat.START);
                         return true;*/
@@ -124,8 +136,6 @@ public class HomePageActivity extends AppCompatActivity {
 
         bnv_menu.setSelectedItemId(R.id.navigation_home);
         loadFragment(new HomeFragment());
-
-      /*  GetCourselist();*/
     }
 
     private void loadFragment(Fragment fragment) {

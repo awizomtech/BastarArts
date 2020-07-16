@@ -2,6 +2,7 @@ package com.awizomtech.bastararts.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
 String ProductName,ProductCode,Description,Image,Pid,Cid;
 ImageView imageView;
 TextView Pname,Pcode,Descrip;
+Button RequestQuote;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +37,7 @@ TextView Pname,Pcode,Descrip;
         Pcode=findViewById(R.id.productcode);
         Descrip =findViewById(R.id.description);
         imageView=findViewById(R.id.imageProduct);
+        RequestQuote=findViewById(R.id.requestaquote);
         ProductName = getIntent().getExtras().getString("Productname");
         ProductCode = getIntent().getExtras().getString("ProductCode");
         Description = getIntent().getExtras().getString("Description");
@@ -49,5 +52,20 @@ TextView Pname,Pcode,Descrip;
         } catch (Exception e) {
             e.printStackTrace();
         }
+        RequestQuote.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String pname = ProductName.toString();
+                String productcode = ProductCode.toString();
+                String image = Image.toString();
+                String pid = String.valueOf(Pid);
+                Intent intent = new Intent(ProductDetailsActivity.this, RequestForQouteActivity.class);
+                intent.putExtra("Productname", pname);
+                intent.putExtra("ProductCode", productcode);
+                intent.putExtra("Image", image);
+                intent.putExtra("pid", pid);
+                startActivity(intent);
+            }
+        });
     }
 }

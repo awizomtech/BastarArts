@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.awizomtech.bastararts.Activity.ProductDetailsActivity;
+import com.awizomtech.bastararts.Activity.RequestForQouteActivity;
 import com.awizomtech.bastararts.AppConfig.AppConfig;
 import com.awizomtech.bastararts.Model.ProductModel;
 import com.awizomtech.bastararts.R;
@@ -74,27 +75,21 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
                 mCtx.startActivity(intent);
             }
         });
-       /* holder.Cardview.setOnClickListener(new View.OnClickListener() {
+        holder.Request.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String ctype = n.getType().toString();
-                if (ctype.contains("Free")) {
-                    String cid = String.valueOf(n.getCourseID());
-                    String coursename = String.valueOf(n.getCourseName());
-                    Intent intent = new Intent(mCtx, FreeSubcriptionActivity.class);
-                    intent.putExtra("CourseName", coursename);
-                    intent.putExtra("Cid", cid);
-                    mCtx.startActivity(intent);
-                } else {
-                    String cid = String.valueOf(n.getCourseID());
-                    String coursename = String.valueOf(n.getCourseName());
-                    Intent intent = new Intent(mCtx, CourseLevelActivity.class);
-                    intent.putExtra("CourseName", coursename);
-                    intent.putExtra("Cid", cid);
-                    mCtx.startActivity(intent);
-                }
+                String pname = n.getProductName().toString();
+                String productcode = n.getProductCode().toString();
+                String image = n.getProductImage().toString();
+                String pid = String.valueOf(n.getProductID());
+                Intent intent = new Intent(mCtx, RequestForQouteActivity.class);
+                intent.putExtra("Productname", pname);
+                intent.putExtra("ProductCode", productcode);
+                intent.putExtra("Image", image);
+                intent.putExtra("pid", pid);
+                mCtx.startActivity(intent);
             }
-        });*/
+        });
 
     }
 
