@@ -31,13 +31,11 @@ public class QuotationAdapter extends RecyclerView.Adapter<QuotationAdapter.MyVi
 
     }
 
-    /* for solve issue of item change on scroll this method is set*/
     @Override
     public long getItemId(int position) {
         return position;
     }
 
-    /* for solve issue of item change on scroll this method is set*/
     @Override
     public int getItemViewType(int position) {
         return position;
@@ -50,7 +48,7 @@ public class QuotationAdapter extends RecyclerView.Adapter<QuotationAdapter.MyVi
         holder.QuoteNo.setText("Quotation No : "+n.getQuotationNo().toString());
         String qdate=n.getCreatedOn().toString();
         String newDate= qdate.split("T")[0];
-        holder.QuoteDate.setText("Quotation Date : "+newDate.toString());
+        holder.QuoteDate.setText("Date : "+newDate.toString());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

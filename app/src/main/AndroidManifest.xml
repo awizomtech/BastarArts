@@ -11,10 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Fragment.ProfileFragment"></activity>
-        <activity android:name=".Fragment.PaymentFragment" />
-        <activity android:name=".Fragment.OrderFragment" />
-        <activity android:name=".Activity.QuotationDetailsActivity" />
+        <activity android:name=".Activity.QuotationDetailsActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".Activity.QuoteListActivity"
             android:theme="@style/AppTheme.NoActionBar" />
