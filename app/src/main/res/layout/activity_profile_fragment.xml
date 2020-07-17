@@ -25,7 +25,7 @@
                 android:layout_marginTop="50dp"
                 android:layout_marginLeft="20dp"
                 android:textColor="#FAF7F7"/>
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/userImage"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
@@ -66,7 +66,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="9575123456"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:textStyle="bold"
                     android:layout_marginLeft="20dp"
                     android:textColor="#858282"/>
@@ -105,7 +105,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="demo@gmail.com"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:textStyle="bold"
                     android:layout_marginLeft="20dp"
                     android:textColor="#858282"/>
@@ -144,7 +144,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Raipur Chhatisgarh"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:textStyle="bold"
                     android:layout_marginLeft="20dp"
                     android:textColor="#858282"/>

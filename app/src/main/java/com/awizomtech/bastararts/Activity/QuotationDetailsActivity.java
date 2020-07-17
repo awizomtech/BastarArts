@@ -2,6 +2,7 @@ package com.awizomtech.bastararts.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
@@ -68,6 +69,19 @@ Button OrderNow;
         } catch (Exception e) {
             e.printStackTrace();
         }
+        OrderNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(QuotationDetailsActivity.this, OrderActivity.class);
+                intent.putExtra("Pid", Pid);
+                intent.putExtra("Qid", Qid);
+                intent.putExtra("Pname", Pname);
+                intent.putExtra("Price", Price);
+                intent.putExtra("Image", Image);
+               startActivity(intent);
+            }
+        });
 
     }
 }
