@@ -36,7 +36,7 @@
                         android:layout_marginTop="10dp"
                        android:text="category name"
                         android:layout_marginLeft="10dp"
-                        android:textColor="#E34B7B"
+                        android:textColor="#7A7979"
                         android:textStyle="bold"
                         android:textSize="18dp" />
                 </LinearLayout>
