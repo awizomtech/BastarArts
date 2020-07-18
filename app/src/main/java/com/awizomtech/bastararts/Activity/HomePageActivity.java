@@ -74,7 +74,8 @@ public class HomePageActivity extends AppCompatActivity {
                     Intent intent = new Intent(HomePageActivity.this, ProductCategoryActivity.class);
                   startActivity(intent);
                 } else if (id == R.id.nav_payment) {
-
+                    Intent intent = new Intent(HomePageActivity.this, PaymentListActivity.class);
+                    startActivity(intent);
                 } else if (id == R.id.nav_order) {
                     Intent intent = new Intent(HomePageActivity.this, OrderListActivity.class);
                     startActivity(intent);

@@ -24,39 +24,56 @@
                 android:layout_margin="5dp"
                 android:id="@+id/linear"
                 android:orientation="vertical">
-                <TextView
-                    android:id="@+id/productname"
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:layout_marginTop="10dp"
-                    android:text="category name"
-                    android:layout_marginLeft="10dp"
-                    android:textColor="#7A7979"
-                    android:textStyle="bold"
-                    android:textSize="14dp" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/quotationNo"
-                        android:layout_width="180dp"
-                        android:layout_height="35dp"
-                        android:text="category name"
-                        android:layout_marginLeft="10dp"
-                        android:textColor="#7A7979"
-                        android:textStyle="bold"
-                        android:textSize="12dp" />
-                    <TextView
-                        android:id="@+id/quotationdate"
+                    <LinearLayout
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:src="@drawable/carticon"/>
+                    </LinearLayout>
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="35dp"
-                        android:text="category name"
-                        android:layout_marginLeft="10dp"
-                        android:textColor="#7A7979"
-                        android:textStyle="bold"
-                        android:textSize="12dp" />
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/productname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="category name"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#7A7979"
+                            android:textStyle="bold"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/quotationNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="category name"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#7A7979"
+                            android:textStyle="bold"
+                            android:textSize="12dp" />
+                        <TextView
+                            android:id="@+id/quotationdate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="category name"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#7A7979"
+                            android:textStyle="bold"
+                            android:textSize="12dp" />
+                    </LinearLayout>
                 </LinearLayout>
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

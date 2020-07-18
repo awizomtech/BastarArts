@@ -24,98 +24,65 @@
                 android:layout_margin="5dp"
                 android:id="@+id/linear"
                 android:orientation="vertical">
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <LinearLayout
-                        android:layout_width="70dp"
+                        android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <ImageView
                             android:layout_width="match_parent"
-                            android:layout_height="70dp"
-                            android:src="@drawable/quoteicon"/>
+                            android:layout_height="60dp"
+                            android:src="@drawable/paymenticon"/>
+                        <TextView
+                            android:id="@+id/paymentdate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="18.07.20"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#7A7979"
+                            android:textStyle="bold"
+                            android:textSize="10dp" />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <TextView
-                            android:id="@+id/productname"
+                            android:id="@+id/transactionID"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="category name"
+                            android:text="TransactionID"
                             android:layout_marginLeft="10dp"
                             android:textColor="#7A7979"
                             android:textStyle="bold"
                             android:textSize="14dp" />
-
                         <TextView
-                            android:id="@+id/quotationNo"
+                            android:id="@+id/paymentMode"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="category name"
+                            android:text="payment Mode"
                             android:layout_marginLeft="10dp"
                             android:textColor="#7A7979"
                             android:textStyle="bold"
+                            android:layout_marginTop="5dp"
                             android:textSize="12dp" />
                         <TextView
-                            android:id="@+id/quotationdate"
+                            android:id="@+id/paymentAmount"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="category name"
+                            android:text="Payment Amount"
                             android:layout_marginLeft="10dp"
                             android:textColor="#7A7979"
                             android:textStyle="bold"
+                            android:layout_marginTop="5dp"
                             android:textSize="12dp" />
                     </LinearLayout>
                 </LinearLayout>
-
             </LinearLayout>
-
-         <!--   <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:id="@+id/linear"
-                android:orientation="vertical">
-                <TextView
-                    android:id="@+id/productname"
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:layout_marginTop="10dp"
-                    android:text="category name"
-                    android:layout_marginLeft="10dp"
-                    android:textColor="#7A7979"
-                    android:textStyle="bold"
-                    android:textSize="14dp" />
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/quotationNo"
-                        android:layout_width="180dp"
-                        android:layout_height="35dp"
-                        android:text="category name"
-                        android:layout_marginLeft="10dp"
-                        android:textColor="#7A7979"
-                        android:textStyle="bold"
-                        android:textSize="12dp" />
-                    <TextView
-                        android:id="@+id/quotationdate"
-                        android:layout_width="match_parent"
-                        android:layout_height="35dp"
-                        android:text="category name"
-                        android:layout_marginLeft="10dp"
-                        android:textColor="#7A7979"
-                        android:textStyle="bold"
-                        android:textSize="12dp" />
-                </LinearLayout>
-            </LinearLayout>-->
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>

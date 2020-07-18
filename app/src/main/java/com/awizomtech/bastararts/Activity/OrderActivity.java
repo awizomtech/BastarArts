@@ -36,6 +36,13 @@ public class OrderActivity extends AppCompatActivity {
     }
 
     private void Iniview() {
+        Button backpress=findViewById(R.id.back);
+        backpress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
       Qty =findViewById(R.id.qty);
         pPrice =findViewById(R.id.price);
         ProductName =findViewById(R.id.productname);
@@ -134,8 +141,8 @@ public class OrderActivity extends AppCompatActivity {
                             Toast.makeText(OrderActivity.this, "Invalid request", Toast.LENGTH_SHORT).show();
                             result = new UserHelper.PostOrder().execute(userid.toString(),address.toString(), landmark.toString(),country.toString(),state.toString(),city.toString(),pincode.toString(),qty.toString(),price.toString(),pid.toString(),qid.toString()).get();
                         } else {
-                            Toast.makeText(OrderActivity.this, "Request Successful Send", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(OrderActivity.this, HomePageActivity.class);
+                            Intent intent = new Intent(OrderActivity.this, PaymentActivity.class);
+                            intent.putExtra("OrderId", result);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(intent);
                         }
