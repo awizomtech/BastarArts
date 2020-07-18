@@ -3,6 +3,7 @@ package com.awizomtech.bastararts.Activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -25,10 +26,14 @@ public class RegisterActivity extends AppCompatActivity {
     Button ll_submit;
     TextView login;
     String result;
+    public ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("loading...");
+        progressDialog.setCancelable(false);
         InitView();
     }
     private void InitView() {
@@ -65,6 +70,14 @@ public class RegisterActivity extends AppCompatActivity {
                     password.setError("Password are not match !");
                 }
                 else {
+
+                    progressDialog.show();
+
+                    new Timer().schedule(new TimerTask() {
+                        public void run() {
+                            RegisterActivity.this.runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
                             String name = firtname.getText().toString();
                             String passw = password.getText().toString();
                             String mob = Mobile.getText().toString();
@@ -73,10 +86,11 @@ public class RegisterActivity extends AppCompatActivity {
                             try {
                                 result = new AccountHelper.PostRegister().execute(name.toString(),mob.toString(), email.toString(),address.toString(),passw.toString()).get();
                                 if (result.isEmpty()) {
-
+                                    progressDialog.dismiss();
                                     Toast.makeText(RegisterActivity.this, "Invalid request", Toast.LENGTH_SHORT).show();
                                     result = new AccountHelper.PostRegister().execute(name.toString(),mob.toString(), email.toString(),address.toString(),passw.toString()).get();
                                 } else {
+                                    progressDialog.dismiss();
                                     Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                                     startActivity(intent);
                                 }
@@ -84,8 +98,15 @@ public class RegisterActivity extends AppCompatActivity {
                                 e.printStackTrace();
                             } catch (ExecutionException e) {
                                 e.printStackTrace();
-                            };
+                            }
+                                }
+
+                            });
                         }
+
+                    }, 500);
+                }
+
             }
         });
 

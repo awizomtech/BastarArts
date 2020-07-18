@@ -84,7 +84,7 @@ String result;
             if (result.isEmpty()) {
             } else {
                 Toast.makeText(PaymentActivity.this, "Request Successful Send", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(PaymentActivity.this, OrderListActivity.class);
+                Intent intent = new Intent(PaymentActivity.this, HomePageActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
             }
@@ -103,7 +103,7 @@ String result;
             if (result.isEmpty()) {
            } else {
                 Toast.makeText(PaymentActivity.this, "Request Successful Send", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(PaymentActivity.this, OrderListActivity.class);
+                Intent intent = new Intent(PaymentActivity.this, HomePageActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
             }
